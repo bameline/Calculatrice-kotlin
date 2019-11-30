@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d1beba19-492e-4df0-8bce-e71a862c743f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,10 +57,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="kotlin" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/fr/br/calc" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -66,7 +70,12 @@
       <recent name="qc.ezio.calc.view" />
       <recent name="no.tornado.app" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Bertrand\IdeaProjects\Calculatrice-Kotlin-TornadoFx\src\test\fr\br\calc" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bertrand\IdeaProjects\Calculatrice-Kotlin-TornadoFx\src\main\kotlin" />
+      <recent name="C:\Users\Bertrand\IdeaProjects\Calculatrice-Kotlin-TornadoFx\src\test" />
       <recent name="C:\Users\Bertrand\IdeaProjects\Calculatrice-Kotlin-TornadoFx\src\main\kotlin\qc\ezio\calc\enums" />
     </key>
   </component>
