@@ -8,8 +8,7 @@ import fr.br.calc.model.Operation
 import fr.br.calc.model.OperatorElement
 import fr.br.calc.utils.Utils
 import org.slf4j.LoggerFactory
-import java.util.ArrayDeque
-import java.util.Stack
+import java.util.*
 
 
 object QueryRunner {
@@ -33,6 +32,8 @@ object QueryRunner {
             // Compute the query
             val resultValue : Double = computeOperation(operation)
 
+            // TODO move this elsewhere
+            // If result is infinite, throw an error
             if( resultValue == Double.POSITIVE_INFINITY || resultValue == Double.NEGATIVE_INFINITY) {
                 throw CustomException("ERROR")
             }
@@ -71,35 +72,10 @@ object QueryRunner {
                 index++
             }
 
-            val stack = Stack<OperatorElement>()
-            val queue = ArrayDeque<AbstractMathElement>()
-
-            // Simplified shutting yard algorithm to order elements
-            for( currentMathElement : AbstractMathElement in listOfMathElements ) {
-                if( currentMathElement.mathElementType == MathElementEnum.Operator || currentMathElement.mathElementType == MathElementEnum.Function ) {
-                    var currentOperatorMathElement = currentMathElement as OperatorElement
-
-                    // If stack is not empty and priority of current element is slower than peek of stack
-                    while( !stack.empty() && ( Utils.getOperatorPriority( currentOperatorMathElement.value) < Utils.getOperatorPriority( stack.peek() .value) ) ){
-                        //pop stack element to queue
-                        queue.add( stack.pop() )
-                    }
-                    stack.push( currentOperatorMathElement );
-                }
-                else if ( currentMathElement.mathElementType == MathElementEnum.Number ){
-                    queue.add( currentMathElement )
-                }
-                else{
-                    // TODO throw custom error
-                }
-            }
-            // Add remaining operants to the queue
-            while ( ! stack.empty() ) {
-                queue.add(stack.pop());
-            }
+            val orderedListOfMathElements = shuttingYardSorting( listOfMathElements )
 
             // Compute Reverse polish notation result
-            resultValue = RpnListComputer.computeRPNMathElementsList(queue)
+            resultValue = RpnListComputer.computeRPNMathElementsList( orderedListOfMathElements )
 
         }
         catch(e : Exception){
@@ -107,6 +83,43 @@ object QueryRunner {
         }
 
         return resultValue
+    }
+
+    /**
+     * Order list of AbstractMthElements according to shutting yard Algorithm
+     */
+    private fun shuttingYardSorting( listOfMathElements : MutableList<AbstractMathElement> ) : Deque<AbstractMathElement> {
+        val stack = Stack<OperatorElement>()
+        val queue = ArrayDeque<AbstractMathElement>()
+
+        try {
+
+            // Go through list of elements to order it according to shutting yard algo
+            for (currentMathElement: AbstractMathElement in listOfMathElements) {
+                if (currentMathElement.mathElementType == MathElementEnum.Operator || currentMathElement.mathElementType == MathElementEnum.Function) {
+                    var currentOperatorMathElement = currentMathElement as OperatorElement
+
+                    // If stack is not empty and priority of current element is slower than peek of stack
+                    while (!stack.empty() && (Utils.getOperatorPriority(currentOperatorMathElement.value) < Utils.getOperatorPriority(stack.peek().value))) {
+                        //pop stack element to queue
+                        queue.add(stack.pop())
+                    }
+                    stack.push(currentOperatorMathElement);
+                } else if (currentMathElement.mathElementType == MathElementEnum.Number) {
+                    queue.add(currentMathElement)
+                } else {
+                    // TODO throw custom error
+                }
+            }
+            // Add remaining operants to the queue
+            while (!stack.empty()) {
+                queue.add(stack.pop());
+            }
+        }
+        catch(e :Exception){
+            throw e
+        }
+        return queue
     }
 
 }

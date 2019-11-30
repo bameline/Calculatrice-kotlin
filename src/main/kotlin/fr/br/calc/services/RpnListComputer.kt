@@ -17,7 +17,7 @@ object RpnListComputer {
     /**
      * Compute list of math elements RPN ordered
      */
-    fun computeRPNMathElementsList ( listOfMathElements: ArrayDeque<AbstractMathElement> ) : Double {
+    fun computeRPNMathElementsList ( listOfMathElements: Deque<AbstractMathElement> ) : Double {
         var resultStack = ArrayDeque<Double>()
 
         try {

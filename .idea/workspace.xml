@@ -21,10 +21,13 @@
         <option value="Kotlin Enum" />
         <option value="Class" />
         <option value="Kotlin File" />
-        <option value="Kotlin Script" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -79,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TornadoFX.CalculatorApp">
+  <component name="RunManager" selected="JUnit.QueryRunnerTest">
     <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
       <node-interpreter value="project" />
       <working-dir value="" />
@@ -201,6 +204,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CalculatorApp (1)" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" temporary="true" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
+      <option name="MAIN_CLASS_NAME" value="fr.br.calc.app.CalculatorApp" />
+      <module name="Calculatrice-Kotlin-TornadoFx" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorApp (2)" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" temporary="true" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
+      <option name="MAIN_CLASS_NAME" value="fr.br.calc.app.CalculatorApp" />
+      <module name="Calculatrice-Kotlin-TornadoFx" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CalculatorApp" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" temporary="true" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
       <option name="MAIN_CLASS_NAME" value="fr.br.calc.app.CalculatorApp" />
       <module name="Calculatrice-Kotlin-TornadoFx" />
@@ -209,20 +226,6 @@
       </method>
     </configuration>
     <configuration name="CalculatriceApp (1)" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" temporary="true" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
-      <option name="MAIN_CLASS_NAME" value="fr.br.calc.app.CalculatriceApp" />
-      <module name="Calculatrice-Kotlin-TornadoFx" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatriceApp (3)" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" temporary="true" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
-      <option name="MAIN_CLASS_NAME" value="qc.ezio.calc.app.CalculatriceApp" />
-      <module name="Calculatrice-Kotlin-TornadoFx" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatriceApp" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" temporary="true" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
       <option name="MAIN_CLASS_NAME" value="fr.br.calc.app.CalculatriceApp" />
       <module name="Calculatrice-Kotlin-TornadoFx" />
       <method v="2">
@@ -254,11 +257,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TornadoFX.CalculatorApp" />
         <item itemvalue="JUnit.QueryRunnerTest" />
+        <item itemvalue="TornadoFX.CalculatorApp (2)" />
+        <item itemvalue="TornadoFX.CalculatorApp (1)" />
+        <item itemvalue="TornadoFX.CalculatorApp" />
         <item itemvalue="TornadoFX.CalculatriceApp (1)" />
-        <item itemvalue="TornadoFX.CalculatriceApp" />
-        <item itemvalue="TornadoFX.CalculatriceApp (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -309,6 +312,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">

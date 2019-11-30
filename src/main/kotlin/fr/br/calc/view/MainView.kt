@@ -4,6 +4,8 @@ import javafx.beans.property.SimpleStringProperty
 import javafx.geometry.Orientation
 import javafx.scene.control.Button
 import fr.br.calc.services.QueryRunner
+import javafx.scene.input.KeyCode
+import javafx.scene.input.KeyEvent
 import qc.ezo.calc.enums.NumbersEnum
 import qc.ezo.calc.enums.OtherSymbolsEnum
 import tornadofx.*
@@ -31,44 +33,6 @@ class MainView : View("Calculator") {
                 }
                 hbox {
                     button {
-                        text = NumbersEnum.One.number.toString()
-                    }
-                    button {
-                        text = NumbersEnum.Two.number.toString()
-                    }
-                    button {
-                        text = NumbersEnum.Three.number.toString()
-                    }
-                }
-                hbox {
-                    button {
-                        text = NumbersEnum.Four.number.toString()
-                    }
-                    button {
-                        text = NumbersEnum.Five.number.toString()
-                    }
-                    button {
-                        text = NumbersEnum.Six.number.toString()
-                    }
-                }
-                hbox {
-                    button {
-                        text = NumbersEnum.Seven.number.toString()
-                    }
-                    button {
-                        text = NumbersEnum.Eight.number.toString()
-                    }
-                    button {
-                        text = NumbersEnum.Nine.number.toString()
-                    }
-                }
-                hbox {
-                    button {
-                        text = NumbersEnum.Zero.number.toString()
-                    }
-                }
-                hbox {
-                    button {
                         text = OtherSymbolsEnum.Empty.symbol.toString()
                         id = "empty"
                     }
@@ -90,11 +54,12 @@ class MainView : View("Calculator") {
 
         // Init each buttons
         // Add content to query buttons
-        root.lookupAll(".button").forEach { button ->
+        // TODO add if actual calculator buttons are needed
+        /*root.lookupAll(".button").forEach { button ->
             button.setOnMouseClicked {
                 addQuery((button as Button).text)
             }
-        }
+        }*/
 
         // Empty content button
         root.lookup("#empty").setOnMouseClicked {
@@ -104,6 +69,13 @@ class MainView : View("Calculator") {
         // Compute query button
         root.lookup("#compute").setOnMouseClicked {
             computeQuery()
+        }
+        // Key events
+        root.addEventFilter(KeyEvent.KEY_PRESSED) {
+            // On key enter pressed
+            if (it.code == KeyCode.ENTER) {
+                computeQuery()
+            }
         }
     }
 

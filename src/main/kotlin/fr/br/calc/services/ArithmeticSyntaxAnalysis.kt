@@ -73,11 +73,11 @@ object ArithmeticSyntaxAnalysis {
 
                     // If right left parenthesis = new sub-operation
                     // TODO replace by enum
-                    if (currentChar.equals("(") /*&& index != 0*/) {
+                    if (currentChar.equals("(") ) {
                         // Recursive call to get nested operations as operation object
                         var subOperation: Operation = checkForOperation(queryCharArray.subList(index + 1, queryCharArray.size))
 
-                        // Add parenthesis around the sub operation
+                        // Add parenthesis around the nested operation
                         var subOperationTotalElementsList = arrayListOf<AbstractMathElement>()
                         subOperationTotalElementsList.add(OperatorElement(MathElementEnum.Parenthesis, queryCharArray[index].toString()))
                         subOperationTotalElementsList.addAll( subOperation.mathElements )
@@ -87,16 +87,13 @@ object ArithmeticSyntaxAnalysis {
                         operationElementsList.add(subOperation)
                         index += subOperation.getExpressionSize()
                     }
-                    // else end of suboperation, return result
+                    // else end of nested operation, return result
                     // TODO replace by enum
                     else if (currentChar.equals(")")) {
                         operationElementsList.add(OperatorElement(MathElementEnum.Parenthesis, currentChar))
                         breakLoop = true;
 
-                    } /*else {
-                        operationElementsList.add(OperatorElement(MathElementEnum.Parenthesis, currentChar))
-                        index++
-                    }*/
+                    }
                 }
                 else{
                     // TODO throw custom exception
