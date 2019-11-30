@@ -100,9 +100,9 @@ object QueryRunner {
                     var currentOperatorMathElement = currentMathElement as OperatorElement
 
                     // If stack is not empty and priority of current element is slower than peek of stack
-                    while (!stack.empty() && (Utils.getOperatorPriority(currentOperatorMathElement.value) < Utils.getOperatorPriority(stack.peek().value))) {
+                    while ( !stack.empty() && ( currentOperatorMathElement.getOperatorPriority()) < stack.peek().getOperatorPriority() )  {
                         //pop stack element to queue
-                        queue.add(stack.pop())
+                        queue.add( stack.pop() )
                     }
                     stack.push(currentOperatorMathElement);
                 } else if (currentMathElement.mathElementType == MathElementEnum.Number) {

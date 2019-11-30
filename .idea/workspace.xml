@@ -91,7 +91,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.QueryRunnerTest">
+  <component name="RunManager" selected="TornadoFX.CalculatorApp (3)">
     <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
       <node-interpreter value="project" />
       <working-dir value="" />
@@ -227,15 +227,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorApp" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" temporary="true" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
+    <configuration name="CalculatorApp (3)" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" temporary="true" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
       <option name="MAIN_CLASS_NAME" value="fr.br.calc.app.CalculatorApp" />
       <module name="Calculatrice-Kotlin-TornadoFx" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatriceApp (1)" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" temporary="true" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
-      <option name="MAIN_CLASS_NAME" value="fr.br.calc.app.CalculatriceApp" />
+    <configuration name="CalculatorApp" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" temporary="true" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
+      <option name="MAIN_CLASS_NAME" value="fr.br.calc.app.CalculatorApp" />
       <module name="Calculatrice-Kotlin-TornadoFx" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -266,11 +266,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TornadoFX.CalculatorApp (3)" />
         <item itemvalue="JUnit.QueryRunnerTest" />
         <item itemvalue="TornadoFX.CalculatorApp (2)" />
         <item itemvalue="TornadoFX.CalculatorApp (1)" />
         <item itemvalue="TornadoFX.CalculatorApp" />
-        <item itemvalue="TornadoFX.CalculatriceApp (1)" />
       </list>
     </recent_temporary>
   </component>

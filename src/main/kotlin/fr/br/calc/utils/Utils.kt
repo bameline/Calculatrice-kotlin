@@ -41,21 +41,5 @@ object Utils {
         dec.roundingMode = RoundingMode.CEILING
         return dec.format( d )
     }
-
-    /**
-     * Return an int indicating an operator priority
-     * 1 < 2 < 3 < 4
-     */
-    fun getOperatorPriority(operator : String) : Int {
-        return when( operator ) {
-            // TODO replace with enums
-            "+" -> 1
-            "-" -> 1
-            "*" -> 2
-            "/" -> 2
-            "^" -> 3
-            // Else its a function, then top priority
-            else -> 4
-        }
-    }
+ 
 }
