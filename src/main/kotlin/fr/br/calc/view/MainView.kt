@@ -2,11 +2,9 @@ package fr.br.calc.view
 
 import javafx.beans.property.SimpleStringProperty
 import javafx.geometry.Orientation
-import javafx.scene.control.Button
 import fr.br.calc.services.QueryRunner
 import javafx.scene.input.KeyCode
 import javafx.scene.input.KeyEvent
-import qc.ezo.calc.enums.NumbersEnum
 import qc.ezo.calc.enums.OtherSymbolsEnum
 import tornadofx.*
 

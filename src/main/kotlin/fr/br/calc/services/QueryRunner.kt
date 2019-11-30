@@ -111,7 +111,7 @@ object QueryRunner {
                     // TODO throw custom error
                 }
             }
-            // Add remaining operants to the queue
+            // Add remaining operators to the queue
             while (!stack.empty()) {
                 queue.add(stack.pop());
             }
